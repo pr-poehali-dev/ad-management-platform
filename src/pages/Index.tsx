@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import { Progress } from '@/components/ui/progress';
+import { YandexDirectSync } from '@/components/YandexDirectSync';
 import {
   LineChart,
   Line,
@@ -133,6 +134,10 @@ const Index = () => {
             <TabsTrigger value="dashboard" className="data-[state=active]:bg-primary/20">
               <Icon name="LayoutDashboard" size={16} className="mr-2" />
               Дашборд
+            </TabsTrigger>
+            <TabsTrigger value="yandex" className="data-[state=active]:bg-primary/20">
+              <Icon name="Zap" size={16} className="mr-2" />
+              Яндекс Директ
             </TabsTrigger>
             <TabsTrigger value="platforms" className="data-[state=active]:bg-primary/20">
               <Icon name="Link" size={16} className="mr-2" />
@@ -311,6 +316,10 @@ const Index = () => {
                 ))}
               </div>
             </Card>
+          </TabsContent>
+
+          <TabsContent value="yandex" className="animate-fade-in">
+            <YandexDirectSync />
           </TabsContent>
 
           <TabsContent value="platforms" className="space-y-4 animate-fade-in">
